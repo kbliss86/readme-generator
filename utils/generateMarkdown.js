@@ -1,3 +1,10 @@
+function populateTitle(title) {
+  if (title !== '') {
+    return `# ${title}`;
+  } else {
+    return '# Blank Title';
+  }
+}
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {}
@@ -12,9 +19,9 @@ function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
-
+  let titlething = populateTitle(data.title);
+  return `# ${titlething}
 `;
 }
 
-module.exports = generateMarkdown;
+module.exports = {generateMarkdown};
