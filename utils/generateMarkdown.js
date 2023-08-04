@@ -1,3 +1,4 @@
+// populate the license badge 
 function populateLicenseBadge(license) {
 switch(license) {
   case 'MIT':
@@ -13,6 +14,8 @@ switch(license) {
     return '';
 }
 }
+
+//populate the readme title
 function populateTitle(title) {
   if (title !== '') {
     return `# ${title}`;
@@ -21,10 +24,12 @@ function populateTitle(title) {
   }
 }
 
+// populate the readme description
 function populateDescription(description) {
   return `\r\n## Description\r\n${description}`
 }
 
+//populate the table of contents
 function populateTable() {
   return `\r\n## Table of Contents\r\n
   - [Installation](#installation)
@@ -35,22 +40,27 @@ function populateTable() {
   `;
 }
 
+//populate the readme installation instructions
 function populateInstall(installation) {
   return `\r\n## Installation\r\n${installation}`
 }
 
+//populate the readme usage instructions
 function populateUsage(usage) {
   return `\r\n## Usage\r\n${usage}`
 }
 
+//populate the readme contribution instructions
 function populateContribution(ccontributing) {
   return `\r\n## Contribution\r\n${ccontributing}`
 }
 
+//populate the readme testing instructions
 function populateTest(tests) {
   return `\r\n## Testing\r\n${tests}`
 }
 
+// populate the url link to the licence
 function populateLicenseLink(license) {
   switch(license) {
     case 'MIT':
@@ -67,6 +77,7 @@ function populateLicenseLink(license) {
   }
 }
 
+//populate the license information
 function populateLicenseName(license) {
   switch(license) {
     case 'MIT':
@@ -83,13 +94,22 @@ function populateLicenseName(license) {
   }
 }
 
+//populate and combine the license link and data
 function populateLicense(data){
   let licenseL = populateLicenseLink(data.license);
   let licenseN = populateLicenseName(data.license);
   return `\r\n## License\r\n${licenseN}\r\n${licenseL}`
 }
 
-// TODO: Create a function to generate markdown for README
+//populate the questions section
+function populateQuestions() {
+  return `\r\n## Questions\r\n
+  - [GitHUb Profile](https://github.com/kbliss86)
+  - [Email](kendall.bliss@nexusbusinessintelligence.com)
+  `;
+}
+
+// fucntion to combine all data and populate the readme file
 function generateMarkdown(data) {
   let titleP = populateTitle(data.title);
   let badgeP = populateLicenseBadge(data.license)
@@ -100,15 +120,18 @@ function generateMarkdown(data) {
   let contributionP = populateContribution(data.ccontributing);
   let testP = populateTest(data.tests);
   let licenseP = populateLicense(data);
-  return `${titleP}
-    ${badgeP}
-    ${descriptionP}
-    ${tableP}
-    ${installationP}
-    ${usageP}
-    ${contributionP}
-    ${testP}
-    ${licenseP}
+  let questionsP = populateQuestions();
+  return `
+${titleP}
+${badgeP}
+${descriptionP}
+${tableP}
+${installationP}
+${usageP}
+${contributionP}
+${testP}
+${licenseP}
+${questionsP}
 `;
 }
 
