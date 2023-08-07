@@ -51,8 +51,8 @@ function populateUsage(usage) {
 }
 
 //populate the readme contribution instructions
-function populateContribution(ccontributing) {
-  return `\r\n## Contribution\r\n${ccontributing}`
+function populateContribution(contributing) {
+  return `\r\n## Contribution\r\n${contributing}`
 }
 
 //populate the readme testing instructions
@@ -117,7 +117,7 @@ function generateMarkdown(data) {
   let tableP = populateTable();
   let installationP = populateInstall(data.installation);
   let usageP = populateUsage(data.usage);
-  let contributionP = populateContribution(data.ccontributing);
+  let contributionP = populateContribution(data.contributing);
   let testP = populateTest(data.tests);
   let licenseP = populateLicense(data);
   let questionsP = populateQuestions();

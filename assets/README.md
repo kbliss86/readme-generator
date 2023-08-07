@@ -1,9 +1,9 @@
 
-# Test
-[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
+# Title
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 ## Description
-this is a test
+This is a description of the repository
 
 ## Table of Contents
 
@@ -15,20 +15,20 @@ this is a test
   
 
 ## Installation
-this is a test
+This is how you install the project
 
 ## Usage
-this is a test
+This is how you use the project
 
 ## Contribution
-undefined
+This is how you contribute to the projectr
 
 ## Testing
-this is a test
+This is how you test the project
 
 ## License
-This project is covered under the Mozilla Public License 2.0 license
-https://www.mozilla.org/en-US/MPL/2.0/
+This project is covered under the Apache License 2.0 licnse
+https://www.apache.org/licenses/LICENSE-2.0
 
 ## Questions
 
